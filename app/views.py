@@ -79,7 +79,8 @@ def upload():
             ))
             flash('File Saved', 'success')
             return redirect(url_for('home'))
-    flash('File Error, try again', 'fail')
+        else: 
+            flash('File Error, try again', 'fail')
 
     return render_template('upload.html', form = upload_form)
 
